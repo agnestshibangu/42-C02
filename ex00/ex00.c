@@ -20,7 +20,7 @@ char    *ft_strcpy(char *dest, char *src)
 
 int     main()
 {
-        char dest[] = "epic fail";
+        char dest[] = "complete fail";
         char src[] = "Success";
         printf("%s\n", ft_strcpy(dest, src));
 }
