@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-int     ft_str_is_alpha(char *str)
+int     ft_str_is_lowercase(char *str)
 {
+
     int i;
 
     i = 0;
 
-    while ( (str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122) )
+    while (str[i] >= 97 && str[i] <= 122)
     {
         i++;
-        return (1);
-
     }
 
     if (str[i] == '\0')
@@ -23,17 +22,17 @@ int     ft_str_is_alpha(char *str)
     {
         return (0);
     }
+
+     return (1);
 }
 
 int main()
 {
-    char str[] = "2561561fesgfesz";
+    char str[] = "AOIDAJZIOAZJ";
     int resu;
 
-    resu = ft_str_is_alpha(str);
+    resu = ft_str_is_lowercase(str);
     printf("return %d", resu);
 
     return(0);
-
 }
-
